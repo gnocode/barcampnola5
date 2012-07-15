@@ -29,6 +29,8 @@ gem "acts-as-taggable-on", "~> 2.3.1"
 # Full text  search
 gem 'thinking-sphinx', '2.0.10'
 
+gem "gdocs4ruby", "~> 0.1.2"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

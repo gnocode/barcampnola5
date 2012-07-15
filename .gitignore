@@ -23,3 +23,5 @@
 /.DS_Store
 .DS_Store
 .sass-cache
+db/schema.rb
+db/development.sqlite3
