@@ -39,17 +39,29 @@ for i, entry in enumerate(feed.entry):
         data[key] = entry.custom[key].text
     datum.append((i, data))
 
+import datetime
+
 
 def transform(entry):
 	output={}
 	output['entry[title]']=entry[1]['headlinetitle']
 	output['entry[body]']=entry[1]['bodytext']
-	output['entry[start_at]']=entry[1]['startdate']
+	if entry[1]['tag']:
+		output['entry[tags]']=entry[1]['tag']
+	if entry[1]['startdate']:
+		output['entry[start_at]']=datetime.datetime.strptime(entry[1]['startdate'],'%m/%d/%Y').strftime("%Y/%m/%d")
 	if entry[1]['enddate']:
-		output['entry[ends_at]']=entry[1]['enddate']
+		output['entry[ends_at]']=datetime.datetime.strptime(entry[1]['enddate'],'%m/%d/%Y').strftime("%Y/%m/%d")
 	return output
 
-payload=transform(datum[0])
 
-r=requests.post('http://barcampnola5.herokuapp.com/entries',payload)
-
+for e in datum[0:10]:
+	print e
+	try:
+		payload=transform(e)
+		r=requests.post('http://nolavation.com/entries',payload)
+		print "ENTRY SENT\n\n\n"
+	except e:
+		print "ENTRY FAILED\n\n\n"
+		print e
+		pass
