@@ -11,8 +11,6 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <script src="js/libs/modernizr-2.5.3.min.js"></script>
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -29,7 +27,7 @@
       </form>
     </div>
     <div class="controls left">
-      <a href="#" class="button">Add A Moment</a>
+      <%= link_to "Add A Moment", "new_moment_path", class: "button" %>
     </div>
     <div class="login right">
       <ul>
@@ -57,8 +55,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
 <script>
   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
