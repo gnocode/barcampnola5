@@ -1,7 +1,10 @@
 class ChangeEntry < ActiveRecord::Migration
-  def change
-    remove_column :entries, :data
-    add_column :entries, :date, :datetime
+  def up
+    remove_column :data
+    add_column :date, :datetime
   end
 
+  def down
+    remove_column :date
+  end
 end

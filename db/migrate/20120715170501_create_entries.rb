@@ -1,6 +1,6 @@
 class CreateEntries < ActiveRecord::Migration
   def change
-    create_table :entries do |t|
+    create_table :moments do |t|
       t.string :title
       t.text :body
       t.datetime :data
