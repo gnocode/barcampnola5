@@ -18,6 +18,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-# Ignore foreman details
-/config/initializers/env.rb
