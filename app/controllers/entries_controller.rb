@@ -42,6 +42,7 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(params[:entry])
 
+    @entry.tag_list = params[:tags] if params[:tags].present?
     respond_to do |format|
       if @entry.save
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
@@ -57,9 +58,12 @@ class EntriesController < ApplicationController
   # PUT /entries/1.json
   def update
     @entry = Entry.find(params[:id])
+    @entry.save
 
     respond_to do |format|
       if @entry.update_attributes(params[:entry])
+        @entry.tag_list = params[:tags] if params[:tags].present?
+        @entry.save
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { head :no_content }
       else
