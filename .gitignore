@@ -18,6 +18,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+tmp
 
 # OS Specific ignores
 /.DS_Store
