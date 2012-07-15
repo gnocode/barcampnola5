@@ -11,10 +11,21 @@
 </p>
 
 <p>
-  <b>Data:</b>
-  <%= @entry.data %>
+  <b>Date:</b>
+  <%= @entry.date %>
 </p>
+
+<p>
+  <b>Tags:</b>
+  <%= @entry.tag_list %>
+</p>
+
+
+
 
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
+<script>
+  window.nolavation.tags = Tag.all
+</script>
