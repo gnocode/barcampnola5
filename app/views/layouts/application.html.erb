@@ -26,6 +26,9 @@
         <input type="text" />
       </form>
     </div>
+    <div class="controls left">
+      <%= link_to "Add A Moment", "new_moment_path", class: "button" %>
+    </div>
     <div class="login right">
       <ul>
         <li><a href="#">Login</a></li>
@@ -35,13 +38,13 @@
   </nav>
 </header>
 <div class="wrapper" role="main">
-  <nav class="clearfix">
+<!--   <nav class="clearfix">
     <ul>
       <li><a href="#">Timeline</a></li>
       <li><a href="#">Add Story</a></li>
       <li><a href="#">About</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
   <%= yield %>
 </div>
