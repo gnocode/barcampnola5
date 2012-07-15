@@ -3,7 +3,7 @@ Barcampnola5::Application.routes.draw do
   get "splash" => "pages#splash"
 
   resources :entries
-
+  resources :tags
   root to: "pages#splash"
 
   # The priority is based upon order of creation:

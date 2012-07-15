@@ -27,5 +27,5 @@
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
 <script>
-  window.nolavation.tags = Tag.all
+  window.nolavation.tags = "<%= Entry.tag_counts_on(:tags).map(&:name).to_json.html_safe %>"
 </script>
