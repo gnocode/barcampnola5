@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: nolaonrails_production
+  database: barcampnola5_production
   pool: 5
-  username: nolaonrails
+  username: barcampnola5
   password:
