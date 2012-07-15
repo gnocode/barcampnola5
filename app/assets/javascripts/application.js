@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require vendor/timeline.js
+//= require jquery-ui
+//= require vendor/timeline
+//= require vendor/bootstrap-dropdown
+//= require pages
+//= require entries
