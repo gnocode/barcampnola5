@@ -11,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120715182007) do
+=======
+ActiveRecord::Schema.define(:version => 20120715175821) do
+>>>>>>> 55603ed2b575d9a9c93bad264f56d49dcc969131
 
   create_table "entries", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+<<<<<<< HEAD
     t.datetime "date"
   end
 
@@ -36,6 +41,13 @@ ActiveRecord::Schema.define(:version => 20120715182007) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+=======
+    t.date     "start_at"
+    t.date     "end_at"
+>>>>>>> 55603ed2b575d9a9c93bad264f56d49dcc969131
   end
+
+  add_index "entries", ["end_at"], :name => "index_entries_on_end_at"
+  add_index "entries", ["start_at"], :name => "index_entries_on_start_at"
 
 end
