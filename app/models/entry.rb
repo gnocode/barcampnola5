@@ -7,9 +7,9 @@ class Entry < ActiveRecord::Base
   attr_accessible :start_at
   attr_accessible :end_at
 
-  define_index do
-    indexes :body
-    indexes :data
-    indexes :title
-  end
+#  define_index do
+#    indexes :body
+#    indexes :data
+#    indexes :title
+#  end
 end
