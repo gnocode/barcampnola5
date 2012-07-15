@@ -1,5 +1,5 @@
 body {
-  font-family: 'Bevan', serif;
+  font-family: 'Rokkitt', serif;
 }
 
 a {
@@ -8,6 +8,8 @@ a {
 }
 
 header {
+  background-color: #2d2e3f;
+
   line-height: 70px;
 
   h1 {
@@ -17,12 +19,18 @@ header {
     margin-left: 20px;
   }
 
+  .controls {
+    .button {
+      margin-left: 20px;
+    }
+  }
+
   .login {
     @include border-radius(5px);
 
-    background-color: #ededed;
     padding: 7px 10px;
     margin: 18px;
+    
     line-height: 18px;
 
     ul {
@@ -32,7 +40,7 @@ header {
         margin: 0px 10px;
 
         a {
-          color: #000000;
+          color: #fff;
           font-weight: bold;
         }
       }
@@ -40,15 +48,38 @@ header {
   }
 }
 
+input[type=text], textarea {
+  @include border-radius(5px);
+  @include box-shadow(rgba(0, 0, 0, 0.1) 0px 0px 7px 3px inset);
+
+  border: 0px;
+
+  padding: 8px;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.button {
+  @include border-radius(5px);
+
+  padding: 8px 10px;
+  background-color: #3fa9f5;
+  font-weight: bold;
+  color: #fff;
+}
+
 .wrapper {
   nav {
-    background-color: #333333;
+    
 
     padding: 15px 0px;
 
     ul {
       li {
-        
+
         font-weight: bold;
 
         float: left;
