@@ -21,4 +21,5 @@
 
 # OS Specific ignores
 /.DS_Store
+.DS_Store
 .sass-cache
