@@ -8,6 +8,7 @@ gem 'unicorn', '4.3.1'
 
 gem 'jquery-rails', '2.0.2'
 
+gem 'pg', '0.14.0', group: [:production, :staging]
 gem 'sqlite3', '1.3.6', group: [:development, :test]
 
 # Full text  search
