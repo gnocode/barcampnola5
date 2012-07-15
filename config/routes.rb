@@ -1,6 +1,7 @@
 Barcampnola5::Application.routes.draw do
   resources :accounts
   resources :entries
+  resources :tags
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/auth/:provider/callback', to: "sessions#create"
