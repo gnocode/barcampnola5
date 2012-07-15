@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'pg'
 #tagging
 gem "acts-as-taggable-on", "~> 2.3.1"
 
