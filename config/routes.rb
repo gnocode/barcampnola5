@@ -1,5 +1,10 @@
 Barcampnola5::Application.routes.draw do
+  get "about" => "pages#about"
+  get "splash" => "pages#splash"
+
   resources :entries
+
+  root to: "pages#splash"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
