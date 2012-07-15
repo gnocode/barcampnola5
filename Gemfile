@@ -11,6 +11,7 @@ gem "acts-as-taggable-on", "2.3.1"
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
 gem "bourbon"
+gem 'rack-rewrite'
 
 group :development do
   gem 'foreman', '0.47.0'
