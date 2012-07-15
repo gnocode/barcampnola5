@@ -11,6 +11,7 @@ gem "acts-as-taggable-on", "2.3.1"
 gem 'gdata'
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
+gem "bourbon"
 
 # Full text  search
 gem 'thinking-sphinx', '2.0.10'
