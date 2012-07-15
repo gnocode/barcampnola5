@@ -620,3 +620,12 @@ td {
         page-break-after: avoid;
     }
 }
+
+
+.left {
+    float:left;
+}
+
+.right {
+    float: right;
+}
