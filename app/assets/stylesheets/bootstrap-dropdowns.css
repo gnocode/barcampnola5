@@ -1,7 +1,10 @@
 
 .dropup,
 .dropdown {
-  position: relative;
+  position: relative; 
+}
+.dropdown a:hover {
+  color: #fff;
 }
 
 .dropdown-toggle {
