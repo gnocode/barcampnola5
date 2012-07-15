@@ -12,6 +12,7 @@ gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
 gem 'rabl'
 gem "bourbon"
+gem 'rack-rewrite'
 
 group :development do
   gem 'foreman', '0.47.0'
