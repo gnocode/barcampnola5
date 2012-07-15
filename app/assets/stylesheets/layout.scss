@@ -40,6 +40,20 @@ header {
   }
 }
 
+input[type=text], textarea {
+  @include border-radius(5px);
+  @include box-shadow(rgba(0, 0, 0, 0.1) 0px 0px 7px 3px inset);
+
+  border: 0px;
+
+  padding: 8px;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
 .wrapper {
   nav {
     background-color: #333333;
