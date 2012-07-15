@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field clearfix">
+  <div class="">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => "Title" %>
   </div>
 
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :placeholder => "Description" %>
   </div>
 
   <div class="field">
