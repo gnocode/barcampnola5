@@ -9,6 +9,7 @@ Barcampnola5::Application.routes.draw do
 
   get "about" => "pages#about"
   get "splash" => "pages#splash"
+  get "timeline" => "entries#timeline"
 
   root to: "pages#splash"
 end
