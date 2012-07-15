@@ -100,6 +100,9 @@ GEM
       pry
     quiet_assets (1.0.1)
       railties (~> 3.1)
+    rabl (0.6.14)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -163,6 +166,7 @@ DEPENDENCIES
   pg (= 0.14.0)
   pry-rails (= 0.1.6)
   quiet_assets (= 1.0.1)
+  rabl
   rack-rewrite
   rails (= 3.2.6)
   sass-rails (= 3.2.3)

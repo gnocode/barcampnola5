@@ -7,8 +7,6 @@ if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.envA)
-
-  config.assets.initialize_on_precompile = false
 end
 
 module Barcampnola5
@@ -41,6 +39,7 @@ module Barcampnola5
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+  config.assets.initialize_on_precompile = false
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 

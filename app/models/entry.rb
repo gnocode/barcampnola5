@@ -7,10 +7,14 @@ class Entry < ActiveRecord::Base
   attr_accessible :start_at
   attr_accessible :end_at
 
-  # define_index do
-  #   indexes :body
-  #   indexes :data
-  #   indexes :title
-  # end
+  before_save :format_start_at
+
+
+  private
+
+  def format_start_at
+    self.start_at = Date.parse start_at
+  end
+
 end
 
