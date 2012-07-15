@@ -10,6 +10,7 @@ gem 'sqlite3', '1.3.6', group: [:development, :test]
 gem "acts-as-taggable-on", "2.3.1"
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
+gem 'rabl'
 gem "bourbon"
 
 group :development do

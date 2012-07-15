@@ -6,7 +6,7 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @entries }
+      format.json
     end
   end
 
@@ -83,9 +83,5 @@ class EntriesController < ApplicationController
       format.html { redirect_to entries_url }
       format.json { head :no_content }
     end
-  end
-
-  def timeline
-
   end
 end
