@@ -11,13 +11,11 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <script src="js/libs/modernizr-2.5.3.min.js"></script>
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
@@ -28,6 +26,9 @@
         <input type="text" />
       </form>
     </div>
+    <div class="controls left">
+      <%= link_to "Add A Moment", "new_moment_path", class: "button" %>
+    </div>
     <div class="login right">
       <ul>
         <li><a href="#">Login</a></li>
@@ -37,13 +38,13 @@
   </nav>
 </header>
 <div class="wrapper" role="main">
-  <nav class="clearfix">
+<!--   <nav class="clearfix">
     <ul>
       <li><a href="#">Timeline</a></li>
       <li><a href="#">Add Story</a></li>
       <li><a href="#">About</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
   <%= yield %>
 </div>
@@ -54,8 +55,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
 <script>
   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
