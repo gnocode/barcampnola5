@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(:version => 20120715193133) do
     t.date     "end_at"
   end
 
-  add_index "moments", ["end_at"], :name => "index_entries_on_end_at"
-  add_index "moments", ["start_at"], :name => "index_entries_on_start_at"
+  add_index "moments", ["end_at"], :name => "index_moments_on_end_at"
+  add_index "moments", ["start_at"], :name => "index_moments_on_start_at"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

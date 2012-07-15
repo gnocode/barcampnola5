@@ -24,3 +24,4 @@
 .sass-cache
 db/schema.rb
 db/development.sqlite3
+

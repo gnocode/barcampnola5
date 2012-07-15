@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class EntriesControllerTest < ActionController::TestCase
+class MomentsControllerTest < ActionController::TestCase
   setup do
-    @entry = entries(:one)
+    @moment = moments(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:entries)
+    assert_not_nil assigns(:moments)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class EntriesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create entry" do
-    assert_difference('Entry.count') do
-      post :create, entry: { body: @entry.body, data: @entry.data, title: @entry.title }
+  test "should create moment" do
+    assert_difference('Moment.count') do
+      post :create, moment: { body: @moment.body, data: @moment.data, title: @moment.title }
     end
 
-    assert_redirected_to entry_path(assigns(:entry))
+    assert_redirected_to moment_path(assigns(:moment))
   end
 
-  test "should show entry" do
-    get :show, id: @entry
+  test "should show moment" do
+    get :show, id: @moment
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @entry
+    get :edit, id: @moment
     assert_response :success
   end
 
-  test "should update entry" do
-    put :update, id: @entry, entry: { body: @entry.body, data: @entry.data, title: @entry.title }
-    assert_redirected_to entry_path(assigns(:entry))
+  test "should update moment" do
+    put :update, id: @moment, moment: { body: @moment.body, data: @moment.data, title: @moment.title }
+    assert_redirected_to moment_path(assigns(:moment))
   end
 
-  test "should destroy entry" do
-    assert_difference('Entry.count', -1) do
-      delete :destroy, id: @entry
+  test "should destroy moment" do
+    assert_difference('Moment.count', -1) do
+      delete :destroy, id: @moment
     end
 
-    assert_redirected_to entries_path
+    assert_redirected_to moments_path
   end
 end

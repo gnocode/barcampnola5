@@ -1,2 +1,2 @@
-module EntriesHelper
+module MomentsHelper
 end

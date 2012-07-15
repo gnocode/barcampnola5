@@ -3138,7 +3138,7 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 				if ( VMM.Browser.browser == "Explorer" && parseInt(VMM.Browser.version, 10) >= 7 && window.XDomainRequest) {
 					var temp_text	=	"<h4><a href='http://" + VMM.master_config.language.api.wikipedia + ".wikipedia.org/wiki/" + api_obj.url + "' target='_blank'>" + api_obj.url + "</a></h4>";
 					temp_text		+=	"<span class='wiki-source'>" + VMM.master_config.language.messages.wikipedia + "</span>";
-					temp_text		+=	"<p>Wikipedia entry unable to load using Internet Explorer 8 or below.</p>";
+					temp_text		+=	"<p>Wikipedia moment unable to load using Internet Explorer 8 or below.</p>";
 					VMM.attachElement("#"+api_obj.id, temp_text );
 				}
 				
@@ -8578,8 +8578,8 @@ if (typeof VMM.Timeline !== 'undefined' && typeof VMM.Timeline.DataObj == 'undef
 					VMM.fireEvent(global, VMM.Timeline.Config.events.messege, "Parsing Data");
 					var _data_obj = VMM.Timeline.DataObj.data_template_obj;
 
-					for(var i = 0; i < d.feed.entry.length; i++) {
-						var dd		= d.feed.entry[i],
+					for(var i = 0; i < d.feed.moment.length; i++) {
+						var dd		= d.feed.moment[i],
 							dd_type	= "";
 						
 						if (typeof dd.gsx$type != 'undefined') {

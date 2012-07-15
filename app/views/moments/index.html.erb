@@ -1,4 +1,4 @@
-<h1>Listing entries</h1>
+<h1>Listing moments</h1>
 
 <table>
   <tr>
@@ -10,18 +10,18 @@
     <th></th>
   </tr>
 
-<% @entries.each do |entry| %>
+<% @moments.each do |moment| %>
   <tr>
-    <td><%= entry.title %></td>
-    <td><%= entry.body %></td>
-    <td><%= entry.date %></td>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, method: :delete, date: { confirm: 'Are you sure?' } %></td>
+    <td><%= moment.title %></td>
+    <td><%= moment.body %></td>
+    <td><%= moment.date %></td>
+    <td><%= link_to 'Show', moment %></td>
+    <td><%= link_to 'Edit', edit_moment_path(moment) %></td>
+    <td><%= link_to 'Destroy', moment, method: :delete, date: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Entry', new_entry_path %>
+<%= link_to 'New Moment', new_moment_path %>

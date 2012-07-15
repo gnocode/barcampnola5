@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class EntriesHelperTest < ActionView::TestCase
+class MomentsHelperTest < ActionView::TestCase
 end

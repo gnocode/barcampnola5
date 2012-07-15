@@ -2,30 +2,30 @@
 
 <p>
   <b>Title:</b>
-  <%= @entry.title %>
+  <%= @moment.title %>
 </p>
 
 <p>
   <b>Body:</b>
-  <%= @entry.body %>
+  <%= @moment.body %>
 </p>
 
 <p>
   <b>Date:</b>
-  <%= @entry.date %>
+  <%= @moment.date %>
 </p>
 
 <p>
   <b>Tags:</b>
-  <%= @entry.tag_list %>
+  <%= @moment.tag_list %>
 </p>
 
 
 
 
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+<%= link_to 'Edit', edit_moment_path(@moment) %> |
+<%= link_to 'Back', moments_path %>
 <script>
   window.nolavation.tags = Tag.all.map(:)
 </script>
