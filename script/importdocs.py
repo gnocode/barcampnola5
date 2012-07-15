@@ -1,4 +1,4 @@
-__author__ = "rizwank@geekymedia.com (Rizwan Kassim)"
+__author__ = "rizwank AT geekymedia PERIOD - USUAL TLD (Rizwan Kassim)"
 import gdata.spreadsheet
 import gdata.spreadsheet.service
 import requests
