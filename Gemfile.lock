@@ -44,9 +44,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    gdata4ruby (0.1.5)
-    gdocs4ruby (0.1.2)
-      gdata4ruby (>= 0.1.1)
+    gdata (1.1.2)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -122,7 +120,7 @@ DEPENDENCIES
   acts-as-taggable-on (~> 2.3.1)
   bourbon
   coffee-rails (~> 3.2.1)
-  gdocs4ruby (~> 0.1.2)
+  gdata
   jquery-rails
   pg
   rails (= 3.2.6)
