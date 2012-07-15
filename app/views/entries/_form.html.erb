@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :data %><br />
-    <%= f.datetime_select :data %>
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
   </div>
 
   <div class="field">
@@ -42,3 +42,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+<div class="field">
+  <%= label_tag :tags %><br />
+  <%= text_area_tag :tags %>
+</div>

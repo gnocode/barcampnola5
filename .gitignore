@@ -22,3 +22,5 @@
 # OS Specific ignores
 /.DS_Store
 .sass-cache
+db/schema.rb
+db/development.sqlite3
