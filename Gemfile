@@ -8,7 +8,6 @@ gem 'jquery-rails', '2.0.2'
 gem 'pg', '0.14.0', group: [:production, :staging]
 gem 'sqlite3', '1.3.6', group: [:development, :test]
 gem "acts-as-taggable-on", "2.3.1"
-gem 'gdata'
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
 gem "bourbon"
