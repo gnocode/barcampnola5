@@ -22,6 +22,8 @@ end
 
 gem 'jquery-rails'
 
+#tagging
+gem "acts-as-taggable-on", "~> 2.3.1"
 
 # Full text  search
 gem 'thinking-sphinx', '2.0.10'
