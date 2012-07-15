@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120715170501) do
+ActiveRecord::Schema.define(:version => 20120715175821) do
 
   create_table "entries", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(:version => 20120715170501) do
     t.datetime "data"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.date     "start_at"
+    t.date     "end_at"
   end
+
+  add_index "entries", ["end_at"], :name => "index_entries_on_end_at"
+  add_index "entries", ["start_at"], :name => "index_entries_on_start_at"
 
 end
