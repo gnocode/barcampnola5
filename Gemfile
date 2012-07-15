@@ -19,6 +19,7 @@ group :development do
   gem 'foreman', '0.47.0'
   gem 'pry-rails', '0.1.6'
   gem 'quiet_assets', '1.0.1'
+  gem 'rb-readline'
   # To use debugger
   # gem 'debugger'
   # gem 'heroku'
