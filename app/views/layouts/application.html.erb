@@ -17,7 +17,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
@@ -28,6 +28,9 @@
         <input type="text" />
       </form>
     </div>
+    <div class="controls left">
+      <a href="#" class="button">Add A Moment</a>
+    </div>
     <div class="login right">
       <ul>
         <li><a href="#">Login</a></li>
@@ -37,13 +40,13 @@
   </nav>
 </header>
 <div class="wrapper" role="main">
-  <nav class="clearfix">
+<!--   <nav class="clearfix">
     <ul>
       <li><a href="#">Timeline</a></li>
       <li><a href="#">Add Story</a></li>
       <li><a href="#">About</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
   <%= yield %>
 </div>
