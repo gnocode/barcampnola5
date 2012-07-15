@@ -12,9 +12,6 @@ gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
 gem "bourbon"
 
-# Full text  search
-gem 'thinking-sphinx', '2.0.10'
-
 group :development do
   gem 'foreman', '0.47.0'
   gem 'pry-rails', '0.1.6'
