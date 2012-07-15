@@ -20,10 +20,10 @@
 <body>
 <header>
   <nav class="clearfix">
-    <h1 class="left"><a href="#">NOLAvation</a></h1>
+    <h1 class="left"><%= logo_link %></h1>
     <div class="search left">
       <form>
-        <input type="text" />
+        <input type="text" placeholder="Search for a moment..."/>
       </form>
     </div>
     <div class="controls left">
@@ -31,10 +31,17 @@
     </div>
     <div class="login right">
       <ul>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Help</a></li>
+        <li class="dropdown" id="login-menu">
+          <a href="#login-menu" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
+
   </nav>
 </header>
 <div class="wrapper" role="main">
@@ -52,8 +59,6 @@
 
 </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
 <script>
   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
