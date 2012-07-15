@@ -11,15 +11,12 @@ gem "acts-as-taggable-on", "2.3.1"
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
 gem "bourbon"
-
-# Full text  search
-gem 'thinking-sphinx', '2.0.10'
+gem 'rack-rewrite'
 
 group :development do
   gem 'foreman', '0.47.0'
   gem 'pry-rails', '0.1.6'
   gem 'quiet_assets', '1.0.1'
-  gem 'rb-readline'
   # To use debugger
   # gem 'debugger'
   # gem 'heroku'

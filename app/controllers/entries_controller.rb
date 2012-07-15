@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = params[:tag].present? ? Entry.tagged_with(params[:tag]) : @entries = Entry.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -83,5 +83,9 @@ class EntriesController < ApplicationController
       format.html { redirect_to entries_url }
       format.json { head :no_content }
     end
+  end
+
+  def timeline
+
   end
 end
