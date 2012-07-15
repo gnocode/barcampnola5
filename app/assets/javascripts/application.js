@@ -16,3 +16,4 @@
 //= require vendor/timeline
 //= require vendor/bootstrap-dropdown
 //= require pages
+//= require entries
