@@ -8,3 +8,4 @@ class Entry < ActiveRecord::Base
   attr_accessible :end_at
 
 end
+
