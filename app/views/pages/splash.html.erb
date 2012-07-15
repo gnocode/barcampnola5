@@ -1,7 +1,6 @@
 <div id="timeline-embed"></div>
 <script type="text/javascript">
   var height = $(window).height() - $("header").height();
-
   var timeline_config = {
   width:              "100%",
   height:             height,
@@ -14,7 +13,7 @@
   maptype:            'watercolor',                   //OPTIONAL MAP STYLE
   css: '/assets/vendor/timeline.css',
   js:                 '/assets/vendor/timeline.js'    //OPTIONAL PATH TO JS
-  
+
   }
   $(window).resize(function(){
     $("#timeline-embed").height($(window).height() - $("header").height());
