@@ -1,0 +1,68 @@
+body {
+  font-family: 'Bevan', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #78bde8;
+}
+
+header {
+  line-height: 70px;
+
+  h1 {
+    margin:0px 15px;
+  }
+  .search {
+    margin-left: 20px;
+  }
+
+  .login {
+    @include border-radius(5px);
+
+    background-color: #ededed;
+    padding: 7px 10px;
+    margin: 18px;
+    line-height: 18px;
+
+    ul {
+      li {
+        float: left;
+
+        margin: 0px 10px;
+
+        a {
+          color: #000000;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  nav {
+    background-color: #333333;
+
+    padding: 15px 0px;
+
+    ul {
+      li {
+        
+        font-weight: bold;
+
+        float: left;
+        margin: 0px 20px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
