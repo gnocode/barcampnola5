@@ -1,7 +1,6 @@
 Barcampnola5::Application.routes.draw do
   resources :accounts
   resources :entries
-  resources :tags
   resources :sessions, only: [:new, :create, :destroy]
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
