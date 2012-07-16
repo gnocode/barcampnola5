@@ -17,6 +17,3 @@
 #= require dropdown
 #= require entries
 #= require pages
-
-$ ->
-  $('.dropdown-toggle').dropdown()
