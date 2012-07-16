@@ -1,5 +1,5 @@
 Barcampnola5::Application.configure do
-   # Settings specified here will take precedence over those in config/application.rb
+  # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -53,7 +53,7 @@ Barcampnola5::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w[ modernizr.js timeline/embed.js ]
+  config.assets.precompile += %w[ timeline/embed.js modernizr.js jquery/mobile.js jquery/mobile.css ]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
