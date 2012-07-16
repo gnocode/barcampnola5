@@ -13,6 +13,5 @@
 #= require jquery
 #= require jquery_ujs
 #= require jquery-ui
-#= require timeline
 #= require dropdown
 #= require_tree .
