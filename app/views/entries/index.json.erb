@@ -1,0 +1,31 @@
+{
+  "timeline":
+    {
+      "headline": "Revolutionary User Interfaces",
+      "startDate": "1600",
+      "text": "<p>The human computer interface helps to define computing at any one time. As computers have become more mainstream the interfaces have become more intimate. This is the journey of computer technology and how it has come to touch all of our lives.</p>",
+      "type": "default",
+      "asset":
+        {
+          "media": "input.png",
+          "credit": "Arjuna Soriano",
+          "caption": "From punch cards to multi touch."
+        },
+      "date":
+        [
+        <% @entries.each do |entry| %>
+          {
+            "startDate": "<%= entry.start_at.year %>",
+            "headline": "<%= entry.title %>",
+            "text": "<%= entry.body %>",
+            "asset":
+              {
+                "media": "",
+                "credit": "",
+                "caption": ""
+              }
+          }
+        <% end %>
+        ]
+    }
+}
