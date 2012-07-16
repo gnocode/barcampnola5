@@ -1,22 +1,69 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_tree ./timeline
-
- */
-
+// This is a manifest file that'll be compiled into application.css, which will include all the files
+// listed below.
+//
+// Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+// or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+//
+// You're free to add application-wide styles to this file and they'll appear at the top of the
+// compiled file, but it's generally better to create a new file per style scope.
+//
+// require_self
+// require_tree .
 
 @import "bourbon";
-@import "boilerplate";
-@import "layout";
-@import "pages";
-@import "entries";
-@import "bootstrap-dropdowns";
-@import "ui-lightness/jquery-ui.css";
+
+body {
+  font-family: 'Rokkitt', serif;
+}
+
+input[type=text], textarea {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 7px 3px inset;
+
+  border: 0px;
+  font-size: 13px;
+  padding: 8px;
+
+  &:focus {
+    width: 300px;
+  }
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 5px;
+
+  padding: 8px 10px;
+  background-color: #3fa9f5;
+  font-weight: bold;
+  color: #fff;
+}
+
+.wrapper {
+  nav {
+    padding: 15px 0px;
+
+    ul {
+      li {
+
+        font-weight: bold;
+
+        float: left;
+        margin: 0px 20px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
