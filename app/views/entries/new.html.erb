@@ -1,3 +1,5 @@
 <div class="entries container">
-  <%= render 'form' %>
+  <%= form_for @entry do |form| %>
+    <%= render 'form', locals: { form: form } %>
+  <% end %>
 </div>
