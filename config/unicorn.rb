@@ -1,4 +1,4 @@
-require "./config/variables"
+require "./config/variables" unless Rails.env.production?
 
 worker_processes ENV["UNICORN_WORKERS"].to_i
 timeout ENV["UNICORN_TIMEOUT"].to_i
