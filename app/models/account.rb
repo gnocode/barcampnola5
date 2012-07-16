@@ -1,4 +1,6 @@
 class Account < ActiveRecord::Base
+  has_many :entries
+
   attr_accessible :email
   attr_accessible :name
   attr_accessible :provider
