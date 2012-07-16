@@ -17,6 +17,7 @@ gem 'dalli', '2.1.0'
 
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
+gem 'omniauth-linkedin', '0.0.6'
 gem 'asset_sync', '0.4.2'
 
 gem 'factory_girl_rails', '3.5.0', group: [:development, :test]
