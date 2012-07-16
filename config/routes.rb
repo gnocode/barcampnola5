@@ -12,6 +12,5 @@ Barcampnola5::Application.routes.draw do
   get "splash" => "pages#splash"
   get "timeline" => "entries#index"
   get "soon" => "pages#soon"
-
-  root to: "pages#soon"
+  root to: 'pages#splash'
 end
