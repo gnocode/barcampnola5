@@ -1,0 +1,32 @@
+<header>
+  <nav class="clearfix">
+
+    <h1 class="left"><%= logo_link %></h1>
+    <div class="search left">
+      <form>
+        <input type="text" placeholder="Search for a moment..."/>
+      </form>
+    </div>
+
+    <div class="controls left">
+      <%= link_to "Add A Moment", new_entry_path, class: "button" %>
+    </div>
+
+    <div class="login right">
+      <ul>
+        <li class="dropdown" id="login-menu">
+          <%= link_to "#login-menu", class: "dropdown-toggle", data: { toggle: "dropdown" } do %>
+            Login <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
