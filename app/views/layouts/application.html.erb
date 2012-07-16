@@ -4,90 +4,8 @@
     <%= render partial: 'metadata' %>
   </head>
   <body>
-    <header>
-      <nav class="clearfix">
+    <%= render partial: 'header' %>
 
-        <h1 class="left"><%= logo_link %></h1>
-        <div class="search left">
-          <form>
-            <input type="text" placeholder="Search for a moment..."/>
-          </form>
-        </div>
-
-        <div class="controls left">
-          <%= link_to "Add A Moment", new_entry_path, class: "button" %>
-        </div>
-
-<<<<<<< Updated upstream
-  <meta name="viewport" content="width=device-width">
-
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-
-  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <div class="soon container">
-    <h1><%= logo_link %></h1>
-    <p>
-      Do you believe that New Orleans needs a website to tell the compelling stories of success, innovation and inspiration in New Orleans’ booming tech scene?
-    </p>
-    <p>
-      If so, stay tuned for upcoming updates as we get ready to launch Nolavation, a site for chronicling the evolution of startups, events and entrepreneurs from 1990 to the present in New Orleans.
-    </p>
-    <p>
-      Additionally, if you'd like to help and learn,come down to Hack Night at <a href="http://goo.gl/maps/X7z3">Launchpad</a> on Tuesdays at 7pm and help us build out the site.  Beginners welcome!
-    </p>
-  </div>
-<!-- <header> -->
-  
-<!--   <nav class="clearfix">
-    <h1 class="left"><%= logo_link %></h1>
-    <div class="search left">
-      <form>
-        <input type="text" placeholder="Search for a moment..."/>
-      </form>
-    </div>
-    <div class="controls left">
-      <%= link_to "Add A Moment", "entries/new", class: "button" %>
-    </div>
-    <div class="login right">
-      <ul>
-        <li class="dropdown" id="login-menu">
-          <a href="#login-menu" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-=======
-        <div class="login right">
-          <ul>
-            <li class="dropdown" id="login-menu">
-              <a href="#login-menu" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Action", "#"%></li>
-              </ul>
-            </li>
->>>>>>> Stashed changes
-          </ul>
-        </div>
-
-      </nav>
-    </header>
-
-<<<<<<< Updated upstream
-  </nav> -->
-<!-- </header> -->
-<div class="wrapper" role="main">
-<!--   <nav class="clearfix">
-    <ul>
-      <li><a href="#">Timeline</a></li>
-      <li><a href="#">Add Story</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav> -->
-=======
     <div class="wrapper" role="main">
       <!--   <nav class="clearfix">
         <ul>
@@ -96,7 +14,6 @@
           <li><a href="#">About</a></li>
         </ul>
       </nav> -->
->>>>>>> Stashed changes
 
       <%= yield %>
     </div>
@@ -105,12 +22,7 @@
 
     </footer>
 
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+    <%= render partial: 'analytics' %>
 
   </body>
 </html>
