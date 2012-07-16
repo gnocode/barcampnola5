@@ -64,11 +64,4 @@ Barcampnola5::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-
-  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
-    r301 %r{.*}, 'http://nolavation.com$&', if: Proc.new { |env|
-      env['SERVER_NAME'] != 'nolavation.com'
-    }
-  end
-
 end
