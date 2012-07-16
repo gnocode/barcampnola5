@@ -2,7 +2,11 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = params[:tag].present? ? Entry.tagged_with(params[:tag]) : @entries = Entry.all
+    if params[:tag]
+      Entry.tagged_with params[:tag]
+    else
+      @entries = Entry.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
