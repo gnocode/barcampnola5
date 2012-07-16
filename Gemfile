@@ -8,14 +8,14 @@ gem 'unicorn', '4.3.1'
 
 gem 'pg', '0.14.0', group: [:production]
 gem 'sqlite3', '1.3.6', group: [:development, :test]
-gem 'draper', '0.14.0'
-gem 'sorcery', '0.7.12'
+gem 'draper', '0.15.0'
+gem 'sorcery', '0.7.12', git: "git@github.com:krainboltgreene/sorcery.git"
 gem 'omniauth', '1.1.0'
 gem 'jquery-rails', '2.0.2'
 gem 'redcarpet', '2.1.1'
 gem 'dalli', '2.1.0'
 
-gem 'omniauth-facebook', '1.2.0'
+gem 'omniauth-facebook', '1.4.1'
 gem 'omniauth-twitter', '0.0.12'
 gem 'omniauth-linkedin', '0.0.6'
 gem 'asset_sync', '0.4.2'
@@ -29,7 +29,7 @@ end
 
 
 group :development do
-  gem 'foreman', '0.47.0'
+  gem 'foreman', '0.51.0'
   gem 'pry-rails', '0.1.6'
   gem 'quiet_assets', '1.0.1'
   gem 'vendorer', '0.1.11'
