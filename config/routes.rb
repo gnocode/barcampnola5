@@ -2,9 +2,9 @@ Barcampnola5::Application.routes.draw do
   resources :accounts
   resources :entries
   resources :sessions, only: [:new, :create, :destroy]
-
-  match '/auth/:provider/callback', to: "sessions#create"
   match 'signout', to: 'sessions#destroy', as: 'signout'
+
+  match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
 
   get 'about' => 'pages#about'
