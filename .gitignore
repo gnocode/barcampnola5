@@ -19,6 +19,5 @@
 /log/*.log
 /tmp
 
-# OS Specific ignores
-/.DS_Store
-/config/initializers/environment.rb
+# Ignore environment variable details
+/config/variables.rb
