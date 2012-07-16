@@ -1,4 +1,14 @@
-1. Install Ruby, 1.9.3 preferably, using RVM preferably
-2. Install bundler, usually with `gem install bundler`
-3. Inside root directory run `bundle install`
-4. To start the server, run `rails server`
+# Setup Instructions
+
+  1. Have Ruby installed, preferably 1.9.3 (Use RVM: http://rvm.io)
+  2. Have Rubygems (already comes with the RVM install)
+  3. Have bundler, run: `gem install bundler --pre`
+  4. Have git installed
+  5. Have sqlite3 installed
+  6. Clone the repository, run: `git clone git@github.com:gnocode/barcampnola5`
+  7. Go into the directory (`cd barcampnola5`) and approve the `.rvmrc` (It'll prompt you)
+  8. Install the gems, run: `bundle install`
+  9. Get the `environment.rb` file from someone, copy it to `config/initializers/`
+  10. Create/migrate the database, run: `rake db:migrate`
+  11. Start the server with `foreman start`
+  12. Go to the webpage: `http://localhost:3000`
