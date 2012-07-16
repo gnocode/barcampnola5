@@ -14,6 +14,7 @@ a.logo {
 
 body {
   font-family: 'Rokkitt', serif;
+  background: url(/assets/background.png);
 }
 
 a {
@@ -112,5 +113,26 @@ input[type=text], textarea {
         }
       }
     }
+  }
+}
+
+
+
+.soon {
+  &.container {
+    width: 600px;
+  }
+
+  h1 {
+    text-align: center;
+    margin:60px auto 20px;
+
+    font-size: 50px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
   }
 }
