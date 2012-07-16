@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:krainboltgreene/sorcery.git
+  remote: git://github.com/krainboltgreene/sorcery.git
   revision: 71a978fcd7d752d4760b892c69177efb1b6c67de
   specs:
     sorcery (0.7.12)
