@@ -14,16 +14,29 @@
 ActiveRecord::Schema.define(:version => 20120715204030) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "uid"
-    t.string   "provider"
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.string   "unlock_token"
+    t.integer  "failed_logins_count",          :default => 0
+    t.datetime "lock_expires_at"
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "avatar"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
   end
 
   add_index "accounts", ["email"], :name => "index_accounts_on_email"
   add_index "accounts", ["name"], :name => "index_accounts_on_name"
+  add_index "accounts", ["remember_me_token"], :name => "index_accounts_on_remember_me_token", :unique => true
+  add_index "accounts", ["unlock_token"], :name => "index_accounts_on_unlock_token", :unique => true
 
   create_table "assets", :force => true do |t|
     t.string   "target"

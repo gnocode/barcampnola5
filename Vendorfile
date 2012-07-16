@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+folder 'vendor/assets/javascripts' do
+  file 'prefixfree.js', 'https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.js'
+  file 'underscore.js', 'http://underscorejs.org/underscore.js'
+  file 'modernizer.js', 'http://modernizr.com/downloads/modernizr-2.5.3.js'
+end
