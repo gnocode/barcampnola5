@@ -20,9 +20,9 @@
           <% end %>
           <ul class="dropdown-menu">
             <% if logged_in? %>
-              <%= render partial: 'nav-dropdown-logged-in' %>
+              <%= render partial: 'login-in-items' %>
             <% else %>
-              <%= render partial: 'nav-dropdown-logged-out' %>
+              <%= render partial: 'login-out-items' %>
             <% end %>
           </ul>
         </li>
