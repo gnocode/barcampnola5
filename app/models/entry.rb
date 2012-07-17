@@ -5,6 +5,7 @@ class Entry < ActiveRecord::Base
   has_and_belongs_to_many :tags
   belongs_to :account
 
+  before_save :create_tags
 
   mapping do
     indexes :id, index: :not_analyzed
@@ -21,5 +22,15 @@ class Entry < ActiveRecord::Base
   attr_accessible :start_at
   attr_accessible :title
   attr_accessible :uri
+  private
+
+  def create_tags
+    names = tag_names.split(/,\s*/) if tag_names
+    if names.any?
+      names.each do |name|
+        tags << Tag.find_or_create_by_name(name)
+      end
+    end
+  end
 
 end
