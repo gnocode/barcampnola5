@@ -1,6 +1,8 @@
 Barcampnola5::Application.routes.draw do
   resources :accounts
-  resources :entries
+  resources :entries do
+    match 'search', on: :collection
+  end
   resources :sessions, only: [:new, :create, :destroy]
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
