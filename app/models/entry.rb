@@ -17,6 +17,10 @@ class Entry < ActiveRecord::Base
     indexes :tags, as: ->(entry) { entry.tags.map(&:name) }
   end
 
+  validates :start_at, presence: true
+  validates :end_at, presence: true
+  validates :title, length: 5..140
+  validates :body, presence: true
 
   before_save :create_tags
   after_create :render_markdown
