@@ -10,12 +10,17 @@
   </div>
 
   <div class="field">
-    <%= form.label :start_at %>
-    <%= form.date_field :start_at %>
+    <%= form.label :start_at, "Start Date" %>
+    <%= form.text_field :start_at %>
   </div>
 
   <div class="field">
-    <%= form.label :end_at %>
-    <%= form.date_field :end_at %>
+    <%= form.label :end_at, "End Date" %>
+    <%= form.text_field :end_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_names, "Tags" %>
+    <%= form.text_field :tag_names %>
   </div>
 </div>
