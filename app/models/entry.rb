@@ -6,6 +6,7 @@ class Entry < ActiveRecord::Base
   belongs_to :account
 
   before_save :create_tags
+  after_create :render_markdown
 
   mapping do
     indexes :id, index: :not_analyzed
@@ -31,6 +32,16 @@ class Entry < ActiveRecord::Base
         tags << Tag.find_or_create_by_name(name)
       end
     end
+  end
+
+  def render_markdown
+    Rails.cache.write "entry[#{id}][body]", markdown_engine.render(body)
+  end
+
+  def markdown_engine
+    engine_output = Redcarpet::Render::HTML
+    engine_options = { autolink: true }
+    Redcarpet::Markdown.new engine_output, engine_options
   end
 
 end
