@@ -12,4 +12,10 @@ class EntriesController < ApplicationController
   def index
     @entries = EntryDecorator.decorate Entry.order(:start_at)
   end
+
+  def search
+    @_entries = Entry.search(params[:search]) if params[:search]
+    @entries = EntryDecorator.decorate @_entries
+    render :index
+  end
 end
