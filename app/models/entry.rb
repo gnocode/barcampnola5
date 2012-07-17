@@ -37,10 +37,12 @@ class Entry < ActiveRecord::Base
   private
 
   def create_tags
-    names = tag_names.split(/,\s*/) if tag_names
-    if names.any?
-      names.each do |name|
-        tags << Tag.find_or_create_by_name(name)
+    if tag_names
+      names = tag_names.split(/,\s*/)
+      if names.any?
+        names.each do |name|
+          tags << Tag.find_or_create_by_name(name)
+        end
       end
     end
   end
