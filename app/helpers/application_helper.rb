@@ -12,4 +12,12 @@ module ApplicationHelper
       "NOLAvation"
     end
   end
+
+  def dropdown_menu_text
+    if logged_in?
+      current_user.name
+    else
+      "Login"
+    end
+  end
 end
