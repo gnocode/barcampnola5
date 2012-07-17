@@ -7,6 +7,13 @@ class EntriesController < ApplicationController
   def create
     @_entry = Entry.new params[:entry]
     @entry = EntryDecorator.new @_entry
+    if @_entry.valid?
+      @_entry.save
+      flash.now[:notice] = "Entry created!"
+      redirect_to entry_path(@_entry)
+    else
+      render :new
+    end
   end
 
   def index
