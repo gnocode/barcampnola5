@@ -20,6 +20,15 @@
   </div>
 
   <div class="field">
+    <%= form.label :media, "Image Link" %>
+    <%= form.url_field :media %>
+
+  <div class="field">
+    <%= form.label :uri, "Article Link" %>
+    <%= form.url_field :uri %>
+  </div>
+
+  <div class="field">
     <%= form.label :tag_names, "Tags" %>
     <%= form.text_field :tag_names %>
   </div>
