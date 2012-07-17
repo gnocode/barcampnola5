@@ -5,6 +5,16 @@ class Entry < ActiveRecord::Base
   has_and_belongs_to_many :tags
   belongs_to :account
 
+
+  mapping do
+    indexes :id, index: :not_analyzed
+    indexes :title, analyzer: 'snowball', boost: 100
+    indexes :body, analyzer: 'snowball'
+    indexes :start_at, type: 'date', include_in_all: false
+    indexes :end_at, type: 'date', include_in_all: false
+    indexes :tags, as: ->(entry) { entry.tags.map(&:name) }
+  end
+
   attr_accessible :body
   attr_accessible :end_at
   attr_accessible :media
