@@ -8,9 +8,6 @@ class Entry < ActiveRecord::Base
 
   belongs_to :account
 
-  before_save :create_tags
-  after_create :render_markdown
-
   mapping do
     indexes :id, index: :not_analyzed
     indexes :title, analyzer: 'snowball', boost: 100
@@ -19,6 +16,10 @@ class Entry < ActiveRecord::Base
     indexes :end_at, type: 'date', include_in_all: false
     indexes :tags, as: ->(entry) { entry.tags.map(&:name) }
   end
+
+
+  before_save :create_tags
+  after_create :render_markdown
 
   attr_accessible :body
   attr_accessible :end_at
