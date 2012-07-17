@@ -1,4 +1,7 @@
 class Entry < ActiveRecord::Base
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
   has_and_belongs_to_many :tags
   belongs_to :account
 
