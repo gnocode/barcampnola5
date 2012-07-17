@@ -3,6 +3,7 @@ class Entry < ActiveRecord::Base
   include Tire::Model::Callbacks
 
   has_and_belongs_to_many :tags
+
   belongs_to :account
 
   before_save :create_tags
@@ -23,6 +24,9 @@ class Entry < ActiveRecord::Base
   attr_accessible :start_at
   attr_accessible :title
   attr_accessible :uri
+  attr_accessible :tag_names
+  attr_accessor :tag_names
+
   private
 
   def create_tags
