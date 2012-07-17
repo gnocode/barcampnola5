@@ -20,6 +20,7 @@
           <% end %>
           <ul class="dropdown-menu">
             <% if logged_in? %>
+              <li><%= link_to "Sign Out", signout_path %></li>
             <% else %>
               <li><%= link_to "Facebook Signin", "/auth/facebook" %></li>
               <li><%= link_to "Twitter Signin", "/auth/twitter" %></li>
