@@ -3,9 +3,9 @@
 
     <h1 class="left"><%= logo_link %></h1>
     <div class="search left">
-      <form>
-        <input type="text" placeholder="Search for a moment..."/>
-      </form>
+      <%= form_tag search_entries_path, method: :get do %>
+        <%= text_field_tag :search, nil, placeholder: "Search for a moment..." %>
+      <% end %>
     </div>
 
     <div class="controls left">
