@@ -2,6 +2,8 @@ class Entry < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
 
+  index_name BONSAI_INDEX_NAME if ENV['BONSAI_INDEX_URL']
+
   has_and_belongs_to_many :tags
 
   belongs_to :account
