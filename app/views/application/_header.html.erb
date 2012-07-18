@@ -1,0 +1,32 @@
+<header>
+  <nav class="clearfix">
+
+    <h1 class="left"><%= logo_link %></h1>
+    <div class="search left">
+      <%= form_tag search_entries_path, method: :get do %>
+        <%= text_field_tag :search, nil, placeholder: "Search for a moment..." %>
+      <% end %>
+    </div>
+
+    <div class="controls left">
+      <%= link_to "Add An Entry", new_entry_path, class: "button" %>
+    </div>
+
+    <div class="login right">
+      <ul>
+        <li class="dropdown" id="login-menu">
+          <%= link_to class: "dropdown-toggle", data: { toggle: "dropdown", target: "#login-menu" } do %>
+            <%= dropdown_menu_text %> <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <% if logged_in? %>
+              <%= render partial: 'login-in-items' %>
+            <% else %>
+              <%= render partial: 'login-out-items' %>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

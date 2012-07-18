@@ -11,57 +11,66 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20120715204030) do
+ActiveRecord::Schema.define(:version => 20120717083959) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "uid"
-    t.string   "provider"
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.string   "unlock_token"
+    t.integer  "failed_logins_count",          :default => 0
+    t.datetime "lock_expires_at"
+    t.string   "uid"
+    t.string   "provider"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
   add_index "accounts", ["email"], :name => "index_accounts_on_email"
   add_index "accounts", ["name"], :name => "index_accounts_on_name"
-
-  create_table "assets", :force => true do |t|
-    t.string   "target"
-    t.string   "credit"
-    t.text     "caption"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+  add_index "accounts", ["oauth_token"], :name => "index_accounts_on_oauth_token"
+  add_index "accounts", ["remember_me_token"], :name => "index_accounts_on_remember_me_token"
+  add_index "accounts", ["unlock_token"], :name => "index_accounts_on_unlock_token"
 
   create_table "entries", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.date     "start_at"
     t.date     "end_at"
-    t.datetime "date"
+    t.string   "uri"
+    t.string   "media"
+    t.integer  "account_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
+  add_index "entries", ["account_id"], :name => "index_entries_on_account_id"
   add_index "entries", ["end_at"], :name => "index_entries_on_end_at"
+  add_index "entries", ["media"], :name => "index_entries_on_media"
   add_index "entries", ["start_at"], :name => "index_entries_on_start_at"
+  add_index "entries", ["title"], :name => "index_entries_on_title"
+  add_index "entries", ["uri"], :name => "index_entries_on_uri"
 
-  create_table "taggings", :force => true do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.integer  "tagger_id"
-    t.string   "tagger_type"
-    t.string   "context",       :limit => 128
-    t.datetime "created_at"
+  create_table "entries_tags", :id => false, :force => true do |t|
+    t.integer "tag_id"
+    t.integer "entry_id"
   end
 
-  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+  add_index "entries_tags", ["entry_id"], :name => "index_entries_tags_on_entry_id"
+  add_index "entries_tags", ["tag_id"], :name => "index_entries_tags_on_tag_id"
 
   create_table "tags", :force => true do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "tags", ["name"], :name => "index_tags_on_name"
 
 end

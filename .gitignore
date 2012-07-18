@@ -18,10 +18,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-tmp
 
-# OS Specific ignores
-/.DS_Store
-.DS_Store
-.sass-cache
-/config/initializers/environment.rb
+# Ignore environment variable details
+/config/variables.rb

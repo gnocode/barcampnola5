@@ -1,71 +1,28 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <%= render partial: 'metadata' %>
+  </head>
+  <body>
+    <%= render partial: 'header' %>
 
-  <title>Barcampnola5</title>
+    <div class="wrapper" role="main">
+      <!--   <nav class="clearfix">
+        <ul>
+          <li><a href="#">Timeline</a></li>
+          <li><a href="#">Add Story</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav> -->
 
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <meta name="viewport" content="width=device-width">
-
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-
-  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<header>
-  <nav class="clearfix">
-    <h1 class="left"><%= logo_link %></h1>
-    <div class="search left">
-      <form>
-        <input type="text" placeholder="Search for a moment..."/>
-      </form>
-    </div>
-    <div class="controls left">
-      <%= link_to "Add A Moment", "entries/new", class: "button" %>
-    </div>
-    <div class="login right">
-      <ul>
-        <li class="dropdown" id="login-menu">
-          <a href="#login-menu" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
+      <%= yield %>
     </div>
 
-  </nav>
-</header>
-<div class="wrapper" role="main">
-<!--   <nav class="clearfix">
-    <ul>
-      <li><a href="#">Timeline</a></li>
-      <li><a href="#">Add Story</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav> -->
+    <footer>
 
-  <%= yield %>
-</div>
-<footer>
+    </footer>
 
-</footer>
+    <%= render partial: 'analytics' %>
 
-
-<script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-
-</body>
+  </body>
 </html>

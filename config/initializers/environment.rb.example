@@ -1,1 +1,0 @@
-ENV["RAILS_SECRET"] = "preferably a string resulting from 'rake secret'"

@@ -1,47 +1,36 @@
-<%= form_for(@entry) do |f| %>
-  <% if @entry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
-
-      <ul>
-      <% @entry.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="">
-    <%= f.label :title %>
-    <%= f.text_field :title, :placeholder => "Title" %>
+<div class="form-controls">
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body, :placeholder => "Description" %>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
   </div>
 
   <div class="field">
-    <%= f.label :date %>
-    <%= f.text_field :date %>
+    <%= form.label :start_at, "Start Date" %>
+    <%= form.text_field :start_at %>
   </div>
 
   <div class="field">
-    <%= f.label :start_at %><br />
-    <%= f.date_select :start_at %>
+    <%= form.label :end_at, "End Date" %>
+    <%= form.text_field :end_at %>
   </div>
 
   <div class="field">
-    <%= f.label :end_at %><br />
-    <%= f.date_select :end_at %>
+    <%= form.label :media, "Image Link" %>
+    <%= form.url_field :media %>
   </div>
 
   <div class="field">
-    <%= label_tag :tags %><br />
-    <%= text_area_tag :tags %>
+    <%= form.label :uri, "Article Link" %>
+    <%= form.url_field :uri %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+    <%= form.label :tag_names, "Tags" %>
+    <%= form.text_field :tag_names %>
   </div>
-<% end %>
+</div>
