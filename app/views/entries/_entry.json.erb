@@ -1,11 +1,8 @@
 {
-  "startDate": "<%= entry.start_at.year %>",
-  "headline": "<%= truncate entry.title %>",
-  "text": "<%= truncate entry.body, length: 90 %>",
-  "asset":
-    {
-      "media": "<%= entry.media %>",
-      "credit": "<%= entry.created_at.year %> <%= entry.creator %>",
-      "caption": "<%= entry.tags %>"
-    }
+  "startDate": "<%= entry.start_at.to_s.gsub('-',',') %>",
+  "headline": "<%= entry.title %>",
+  "text": "<%= entry.body.gsub(/\s+/, ' ') %>",
+  "assets": {
+    "media": "<%= entry.media %>"
+  }
 }

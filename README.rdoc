@@ -8,7 +8,7 @@
   6. Clone the repository, run: `git clone git@github.com:gnocode/barcampnola5`
   7. Go into the directory (`cd barcampnola5`) and approve the `.rvmrc` (It'll prompt you)
   8. Install the gems, run: `bundle install`
-  9. Get the `variables.rb` file from someone, copy it to `config/variables.rb`
+  9. Get the `variables` file from someone, copy it to `config/variables.rb`
   10. Create/migrate the database, run: `rake db:migrate`
   11. Start the server with `foreman start`
   12. Go to the webpage: `http://localhost:3000`

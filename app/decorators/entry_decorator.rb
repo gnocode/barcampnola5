@@ -5,8 +5,8 @@ class EntryDecorator < Draper::Base
     entry.title
   end
 
-  def body
-    Rails.cache.read("entry[#{entry.id}][body]") || entry.body
+  def markdown
+    Rails.cache.read("entry[#{entry.id}][body]")
   end
 
   def creator

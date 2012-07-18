@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_filter :require_login, only: [:new, :create]
+  before_filter :require_login, only: [:new]
 
   def new
     @_entry = Entry.new

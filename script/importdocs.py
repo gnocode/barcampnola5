@@ -17,8 +17,8 @@ def PrintFeed(feed):
             for key in entry.custom:
                 print '  %s: %s' % (key, entry.custom[key].text)
             print '\n',
-        else: 
-            print '%s %s\n' % (i, entry.title.text) 
+        else:
+            print '%s %s\n' % (i, entry.title.text)
 
 gd_client = gdata.spreadsheet.service.SpreadsheetsService()
 gd_client.email = 'nolavation@gmail.com'
@@ -43,25 +43,23 @@ import datetime
 
 
 def transform(entry):
-	output={}
-	output['entry[title]']=entry[1]['headlinetitle']
-	output['entry[body]']=entry[1]['bodytext']
-	if entry[1]['tag']:
-		output['entry[tags]']=entry[1]['tag']
-	if entry[1]['startdate']:
-		output['entry[start_at]']=datetime.datetime.strptime(entry[1]['startdate'],'%m/%d/%Y').strftime("%Y/%m/%d")
-	if entry[1]['enddate']:
-		output['entry[ends_at]']=datetime.datetime.strptime(entry[1]['enddate'],'%m/%d/%Y').strftime("%Y/%m/%d")
-	return output
+  output={}
+  output['entry[title]']=entry[1]['headlinetitle']
+  output['entry[body]']=entry[1]['bodytext']
+  if entry[1]['tag']:
+    output['entry[tag_names]']=entry[1]['tag']
+  if entry[1]['startdate']:
+    output['entry[start_at]']=datetime.datetime.strptime(entry[1]['startdate'].split(' ')[0],'%m/%d/%Y').strftime("%Y/%m/%d")
+  if entry[1]['enddate']:
+    output['entry[ends_at]']=datetime.datetime.strptime(entry[1]['enddate'].split(' ')[0],'%m/%d/%Y').strftime("%Y/%m/%d")
+  return output
 
 
-for e in datum[0:10]:
-	print e
-	try:
-		payload=transform(e)
-		r=requests.post('http://nolavation.com/entries',payload)
-		print "ENTRY SENT\n\n\n"
-	except e:
-		print "ENTRY FAILED\n\n\n"
-		print e
-		pass
+for e in datum:
+  try:
+    payload=transform(e)
+    r=requests.post('http://localhost:3000/entries',payload)
+  except:
+    print "ENTRY FAILED\n\n\n"
+    print e
+    pass

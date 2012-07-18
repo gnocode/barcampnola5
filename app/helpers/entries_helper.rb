@@ -15,7 +15,7 @@ module EntriesHelper
   end
 
   def main_timeline_text
-    ""
+    "Nolavation Web App"
   end
 
   def main_timeline_media
