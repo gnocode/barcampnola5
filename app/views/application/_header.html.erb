@@ -9,13 +9,13 @@
     </div>
 
     <div class="controls left">
-      <%= link_to "Add An Entry", new_entry_path, class: "button" %>
+      <%= link_to "Add A Moment", new_entry_path, class: "button" %>
     </div>
 
     <div class="login right">
       <ul>
         <li class="dropdown" id="login-menu">
-          <%= link_to class: "dropdown-toggle", data: { toggle: "dropdown", target: "#login-menu" } do %>
+          <%= link_to "#login-menu", class: "dropdown-toggle", data: { toggle: "dropdown" } do %>
             <%= dropdown_menu_text %> <b class="caret"></b>
           <% end %>
           <ul class="dropdown-menu">
