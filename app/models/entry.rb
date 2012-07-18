@@ -24,12 +24,12 @@ class Entry < ActiveRecord::Base
   before_save :create_tags
   after_create :render_markdown
 
-  attr_accessible :body
-  attr_accessible :end_at
-  attr_accessible :media
-  attr_accessible :start_at
   attr_accessible :title
+  attr_accessible :body
+  attr_accessible :media
   attr_accessible :uri
+  attr_accessible :start_at
+  attr_accessible :end_at
   attr_accessible :tag_names
   attr_accessible :tags
   attr_accessor :tag_names
