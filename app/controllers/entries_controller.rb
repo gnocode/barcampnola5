@@ -23,8 +23,9 @@ class EntriesController < ApplicationController
   end
 
   def search
-    @_entries = Entry.search(params[:search]) if params[:search]
-    @entries = EntryDecorator.decorate @_entries
+    @_results = Entry.search(params[:search]) if params[:search]
+    @results = EntryDecorator.decorate @_results.sort_by(&:start_at)
+    @_entries = Entry.order(&:start_at).map(&:id).map(&:to_s)
     render :index
   end
 end

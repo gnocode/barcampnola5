@@ -10,8 +10,8 @@ class Entry < ActiveRecord::Base
 
   mapping do
     indexes :id, index: :not_analyzed
-    indexes :title, analyzer: 'snowball', boost: 100
-    indexes :body, analyzer: 'snowball'
+    indexes :title
+    indexes :body
     indexes :start_at, type: 'date', include_in_all: false
     indexes :end_at, type: 'date', include_in_all: false
     indexes :tags, as: ->(entry) { entry.tags.map(&:name) }
