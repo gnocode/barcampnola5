@@ -5,6 +5,10 @@ class EntryDecorator < Draper::Base
     entry.title
   end
 
+  def tags
+    entry.tags.map(&:name).join(", ")
+  end
+
   def markdown
     Rails.cache.read("entry[#{entry.id}][body]")
   end
