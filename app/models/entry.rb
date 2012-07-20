@@ -8,6 +8,8 @@ class Entry < ActiveRecord::Base
 
   belongs_to :account
 
+  has_paper_trail
+
   mapping do
     indexes :id, index: :not_analyzed
     indexes :title
