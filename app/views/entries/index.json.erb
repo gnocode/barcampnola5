@@ -7,7 +7,7 @@
     "asset": {
       "media": "https://si0.twimg.com/profile_images/1819015862/image.jpg",
       "credit": "The Good People At BarCampNOLA5",
-      "caption": "<%= @entries.map(&:tags).flatten.map(&:name).uniq.join(', ') %>"
+      "caption": "<%= @entries.map(&:entry).map(&:tags).flatten.uniq.map(&:name).join(', ') %>"
     },
     "date": [<%= raw entry_dates %>]
   }

@@ -8,7 +8,7 @@ class Entry < ActiveRecord::Base
 
   belongs_to :account
 
-  has_paper_trail
+  has_paper_trail on: [:update, :destroy]
 
   mapping do
     indexes :id, index: :not_analyzed

@@ -2,3 +2,10 @@
 <h3><%= @entry.tags %></h3>
 
 <p><%= @entry.body %></p>
+
+
+<ol>
+  <% @entry.versions.each do |version| %>
+    <li><%= version.originator %></li>
+  <% end %>
+</ol>

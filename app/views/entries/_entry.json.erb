@@ -5,6 +5,6 @@
   "asset": {
     "media":"<%= entry.media %>",
     "credit":"© <%= entry.created_at.year %> <%= entry.account if entry.account %>",
-    "caption":"<%= entry.tags.map(&:name).join(", ") %>"
+    "caption":"<%= entry.tags %>"
   }
 }
