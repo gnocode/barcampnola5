@@ -1,8 +1,14 @@
 {
   "timeline": {
-      "headline": "<%= main_timeline_headline %>",
-      "text": "<%= main_timeline_text %>",
-      "type": "default",
-      "date": [<%= raw entry_dates %>]
-    }
+    "headline": "<%= main_timeline_headline %>",
+    "type": "default",
+    "startDate": "<%= @entries.first.start_at.year - 1 %>",
+    "text": "<p><%= main_timeline_text %></p>",
+    "asset": {
+      "media": "https://si0.twimg.com/profile_images/1819015862/image.jpg",
+      "credit": "The Good People At BarCampNOLA5",
+      "caption": "<%= @entries.map(&:tags).flatten.map(&:name).uniq.join(', ') %>"
+    },
+    "date": [<%= raw entry_dates %>]
+  }
 }
