@@ -18,12 +18,12 @@ task :import => :environment do
   end
 
   entries.each do |entry|
-    uri = "localhost"
+    uri = ENV["IMPORT_URI"] || "nolavation-de-production.herokuapp.com"
     path = '/entries.json'
     body = { :entry => entry }.to_json
     header = { "Content-Type" => "application/json" }
 
-    http = Net::HTTP.new(uri, 3000)
+    http = Net::HTTP.new(uri, ENV["IMPORT_PORT"])
     http.post path, body, header
   end
 end
