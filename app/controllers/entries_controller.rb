@@ -14,7 +14,7 @@ class EntriesController < ApplicationController
       flash.now[:notice] = "Entry created!"
       redirect_to entry_path(@_entry)
     else
-      render :new
+      render :new, formats: :html
     end
   end
 
