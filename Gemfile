@@ -15,6 +15,7 @@ gem 'omniauth', '1.1.0'
 gem 'jquery-rails', '2.0.2'
 gem 'redcarpet', '2.1.1'
 gem 'dalli', '2.1.0'
+gem 'paper_trail', '2.6.3'
 
 gem 'omniauth-facebook', '1.2.0'
 gem 'omniauth-twitter', '0.0.12'
