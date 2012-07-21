@@ -1,6 +1,9 @@
 <div class="entries container">
-  <%= form_for @entry do |form| %>
-    <%= render partial: 'form', locals: { form: form } %>
+  <%= simple_form_for @entry do |form| %>
+    <%= form.error_notification %>
+    <div class="form-inputs">
+      <%= render partial: 'form', locals: { form: form } %>
+    </div>
     <div class="form-actions">
       <%= form.submit class: "button" %>
     </div>

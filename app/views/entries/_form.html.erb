@@ -1,36 +1,33 @@
-<div class="form-controls">
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <div class="field">
-    <%= form.label :start_at, "Start Date" %>
-    <%= form.text_field :start_at %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end_at, "End Date" %>
-    <%= form.text_field :end_at %>
-  </div>
-
-  <div class="field">
-    <%= form.label :media, "Image Link" %>
-    <%= form.url_field :media %>
-  </div>
-
-  <div class="field">
-    <%= form.label :uri, "Article Link" %>
-    <%= form.url_field :uri %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tag_names, "Tags" %>
-    <%= form.text_field :tag_names %>
-  </div>
+<div class="field">
+<%= form.input :title %>
 </div>
+
+<div class="field">
+  <%= form.input :body %>
+</div>
+
+<div class="field">
+  <%= form.input :start_at, label: "Start Date", as: :string %>
+</div>
+
+<div class="field">
+  <%= form.input :end_at, label: "End Date", as: :string %>
+</div>
+
+<div class="field">
+  <%= form.input :media, as: :url, label: "Image Link" %>
+</div>
+
+<div class="field">
+  <%= form.input :uri, as: :url, label: "Article Link" %>
+</div>
+
+<div class="field">
+  <%= form.input :tag_names, label: "Tags", placeholder: "company, fun, tech", value: @entry.tags %>
+</div>
+
+
+
+
+
+

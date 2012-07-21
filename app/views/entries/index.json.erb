@@ -5,7 +5,7 @@
     "startDate": "<%= @entries.first.start_at.year - 1 %>",
     "text": "<p><%= main_timeline_text %></p>",
     "asset": {
-      "media": "https://si0.twimg.com/profile_images/1819015862/image.jpg",
+      "media": "<%= main_timeline_media %>",
       "credit": "The Good People At BarCampNOLA5",
       "caption": "<%= @entries.map(&:entry).map(&:tags).flatten.uniq.map(&:name).join(', ') %>"
     },

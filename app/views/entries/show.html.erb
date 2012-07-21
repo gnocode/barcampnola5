@@ -6,6 +6,6 @@
 
 <ol>
   <% @entry.versions.each do |version| %>
-    <li><%= version.originator %></li>
+    <li><%= version.originator.name %> <%= version.created_at %></li>
   <% end %>
 </ol>

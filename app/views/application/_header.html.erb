@@ -1,6 +1,5 @@
 <header>
   <nav class="clearfix">
-
     <h1 class="left"><%= logo_link %></h1>
     <div class="search left">
       <%= form_tag search_entries_path, method: :get do %>
@@ -10,6 +9,8 @@
 
     <div class="controls left">
       <%= link_to "Add A Moment", new_entry_path, class: "button" %>
+
+      <%= link_to "About Us", about_path, class: "button" %>
     </div>
 
     <div class="login right">
